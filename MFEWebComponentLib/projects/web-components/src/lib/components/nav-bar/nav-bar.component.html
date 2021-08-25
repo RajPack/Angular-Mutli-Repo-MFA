@@ -1,0 +1,4 @@
+<div class="nav-container">
+    <a *ngFor="let tab of navTabs" [attr.href]="tab.href" (click)="emitEvent($event, tab.href)" >{{tab.label}}</a> 
+    <span>Repo: MFEWebComponentsLib</span>
+</div>

@@ -1,0 +1,23 @@
+<div class="shell-container">
+  <h2>MFA Shell</h2>
+  <h4>Repo: MFAShell</h4>
+  <p>
+    <label for="username">UserName:</label>
+    <input
+      #uname
+      type="text"
+      name="username"
+      [attr.value]="userName"
+      (input)="onUserNameChange(uname.value)"
+    />
+  </p>
+
+  <div class="mfe-container">
+    <wc-nav-bar
+      [navTabs]="tabs"
+      (navClick)="router.navigate([$event], { relativeTo: activatedRoute })"
+    ></wc-nav-bar>
+
+    <router-outlet></router-outlet>
+  </div>
+</div>
